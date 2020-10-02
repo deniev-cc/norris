@@ -6,8 +6,6 @@ import Menu from "./components/Menu";
 import {useGlobalContext} from "./context";
 
 const App = () => {
-    const {jokes, setJokes} = useGlobalContext();
-
     return (
         <BrowserRouter>
             <Layout
