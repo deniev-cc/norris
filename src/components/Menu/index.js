@@ -11,6 +11,9 @@ const Menu = () => {
                 <Link href="/" value="Главная" />
             </li>
             <li className="nav-item">
+                <Link href="/timer" value="Таймер" />
+            </li>
+            <li className="nav-item">
                 <Link href="/favorite" value={`Избранное (${count})`} />
             </li>
         </ul>

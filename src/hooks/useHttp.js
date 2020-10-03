@@ -9,13 +9,14 @@ const useHttp = () => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
 
-    const request = useCallback(async () => {
+    const request = useCallback(async (callback = () => {}) => {
         setLoading(true);
         setResponse(null);
 
         try {
             const {data} = await axios.get(API_URL);
             setResponse(data);
+            callback()
         } catch (e) {
             setError(e);
         } finally {
